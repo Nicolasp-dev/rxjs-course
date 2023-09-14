@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
-import { Observable } from "rxjs";
-import { createHttpObservable } from "../utils";
+import { Component, OnInit } from "@angular/core";
 import { map } from "rxjs/operators";
+import { createHttpObservable } from "../utils";
 
 @Component({
   selector: "about",
@@ -9,9 +8,5 @@ import { map } from "rxjs/operators";
   styleUrls: ["./about.component.css"],
 })
 export class AboutComponent implements OnInit {
-  ngOnInit() {
-    const http$ = createHttpObservable("/api/courses");
-
-    const courses$ = http$.pipe(map((res) => Object.values(res["payload"])));
-  }
+  ngOnInit() {}
 }
