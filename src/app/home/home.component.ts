@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.beginnerCourses$ = this.store.selectBeginnerCourses();
-
     this.advancedCourses$ = this.store.selectAdvancedCourses();
   }
 }
